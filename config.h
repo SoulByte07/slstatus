@@ -71,5 +71,9 @@ static const struct arg args[] = {
 //    { disk_perc,    "\033[34;4mDisk: %s%%\033[0m | ", "/" },         // Blue disk usage
     { ram_perc,     "\033[31;4mRAM: %s%%\033[0m | ", NULL },         // Red memory usage
     { cpu_perc,     "\033[32;4mCPU: %s%%\033[0m | ", NULL },         // Green CPU usage
+//    { netspeed_rx,  "\033[36;4mRX: %s\033[0m | ", "wlp0s20f3" },     // Cyan RX speed
+//    { netspeed_tx,  "\033[36;4mTX: %s\033[0m | ", "wlp0s20f3" },     // Cyan TX speed
+    { netspeed_rx,   " ⬇ %sB/s ",    "wlan0" }, /* Tracks incoming download speed */
+    { netspeed_tx,   " ⬆ %sB/s ",    "wlan0" },
     { datetime,     "\033[35;4m%s\033[0m", "%l:%M %p" },           // Purple + underlined time
 };
