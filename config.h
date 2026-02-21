@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 3000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -67,13 +67,9 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
     /* function format                 argument */
-    { battery_perc, "\033[33;4mBat: %s%%\033[0m | ", "BAT0" },     // Yellow + underlined
 //    { disk_perc,    "\033[34;4mDisk: %s%%\033[0m | ", "/" },         // Blue disk usage
-    { ram_perc,     "\033[31;4mRAM: %s%%\033[0m | ", NULL },         // Red memory usage
+    { ram_used,     "\033[31;4mRAM: %s%GB\033[0m | ", NULL },         // Red memory usage
     { cpu_perc,     "\033[32;4mCPU: %s%%\033[0m | ", NULL },         // Green CPU usage
-//    { netspeed_rx,  "\033[36;4mRX: %s\033[0m | ", "wlp0s20f3" },     // Cyan RX speed
-//    { netspeed_tx,  "\033[36;4mTX: %s\033[0m | ", "wlp0s20f3" },     // Cyan TX speed
-    { netspeed_rx,   " ⬇ %sB/s ",    "wlan0" }, /* Tracks incoming download speed */
-    { netspeed_tx,   " ⬆ %sB/s ",    "wlan0" },
+    { battery_perc, "\033[33;4mBat: %s%%\033[0m | ", "BAT0" },     // Yellow + underlined
     { datetime,     "\033[35;4m%s\033[0m", "%l:%M %p" },           // Purple + underlined time
 };
