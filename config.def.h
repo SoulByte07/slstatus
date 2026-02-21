@@ -68,10 +68,11 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
     /* function format                 argument */
 //    { disk_perc,    "\033[34;4mDisk: %s%%\033[0m | ", "/" },         // Blue disk usage
-    { netspeed_rx,  "\033[34;4mUP: %s\033[0m | ", wlp0s20f3},
-    { netspeed_tx,  "\033[34;4mDOWN: %s\033[0m | ", wlp0s20f3},
+    { netspeed_rx,  "\033[34;4mUP: %s\033[0m | ", "wlp0s20f3"},
+    { netspeed_tx,  "\033[34;4mDOWN: %s\033[0m | ", "wlp0s20f3"},
     { ram_used,     "\033[31;4mRAM: %s\033[0m | ", NULL },         // Red memory usage
     { cpu_perc,     "\033[32;4mCPU: %s%%\033[0m | ", NULL },         // Green CPU usage
     { battery_perc, "\033[33;4mBat: %s%%\033[0m | ", "BAT0" },     // Yellow + underlined
+    { battery_remaining, "\033[33;4mBat: %s\033[0m | ", "BAT0" },     // Yellow + underlined
     { datetime,     "\033[35;4m%s\033[0m", "%l:%M " },           // Purple + underlined time
 };
