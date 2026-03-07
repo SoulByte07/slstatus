@@ -65,12 +65,25 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 
+  /* Color codes:
+   * Color,Foreground Code,Background Code
+      Black,30,40
+      Red,31,41
+      Green,32,42
+      Yellow,33,43
+      Blue,34,44
+      Magenta,35,45
+      Cyan,36,46
+      White,37,47
+  */
+
 static const struct arg args[] = {
     /* function format                 argument */
 //    { disk_perc,    "\033[34;4mDisk: %s%%\033[0m | ", "/" },         // Blue disk usage
-    { netspeed_rx,  "\033[34;4m   %s%B\033[0m | ", "wlp0s20f3"},
-    { netspeed_tx,  "\033[34;4m   %s%B\033[0m | ", "wlp0s20f3"},
-    { ram_used,     "\033[31;4m󰾆  %s%B\033[0m | ", NULL },         // Red memory usage
+    { netspeed_rx,  "\033[34;4m   %sB\033[0m | ", "wlan0"},
+    { netspeed_tx,  "\033[34;4m   %sB\033[0m | ", "wlan0"},
+    { ram_used,     "\033[31;4m󰾆  %sB\033[0m | ", NULL },         // Red memory usage
+    { swap_used,    "\033[36;4m󰓡  %sB\033[0m | ", NULL},
     { cpu_perc,     "\033[32;4m󰍛  %s%%\033[0m | ", NULL },         // Green CPU usage
     { battery_perc, "\033[33;4m󰁿 %s%%\033[0m | ", "BAT0" },     // Yellow + underlined
     { battery_remaining, "\033[33;4m%s\033[0m | ", "BAT0" },     // Yellow + underlined
