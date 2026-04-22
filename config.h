@@ -88,5 +88,6 @@ static const struct arg args[] = {
     { cpu_perc,     "\033[32;4m󰍛  %s%%\033[0m | ", NULL },         // Green CPU usage
     { battery_perc, "\033[33;4m󰁿 %s%%\033[0m | ", "BAT0" },     // Yellow + underlined
     { battery_remaining, "\033[33;4m%s\033[0m | ", "BAT0" },     // Yellow + underlined
-    { datetime,     "\033[35;4m  %s\033[0m", "%l:%M " },           // Purple + underlined time
+    // { datetime,     "\033[35;4m  %s\033[0m", "%l:%M " },           // Purple + underlined time
+    { datetime,     "\033[35;4m  %s\033[0m | \033[36m󰣇  \033[0m", "%l:%M " },
 };
