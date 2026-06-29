@@ -80,14 +80,14 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
     /* function format                 argument */
 //    { disk_perc,    "\033[34;4mDisk: %s%%\033[0m | ", "/" },         // Blue disk usage
-    { netspeed_rx,  "\033[34;4m   %sB\033[0m | ", "wlan0"},
-    { netspeed_tx,  "\033[34;4m   %sB\033[0m | ", "wlan0"},
-    { ram_used,     "\033[31;4m󰾆  %sB\033[0m | ", NULL },         // Red memory usage
+    { netspeed_rx,  "\033[34;4m %sB\033[0m |", "wlp0s20f3"},
+    { netspeed_tx,  "\033[34;4m %sB\033[0m |", "wlp0s20f3"},
+    { ram_used,     "\033[31;4m󰓅 %sB\033[0m |", NULL },         // Red memory usage
 //    { swap_used,    "\033[36;4m󰓡  %sB\033[0m | ", NULL},
-    { temp,         "\033[36;4m  %s°C\033[0m | ", "/sys/class/thermal/thermal_zone9/temp"},
-    { cpu_perc,     "\033[32;4m󰍛  %s%%\033[0m | ", NULL },         // Green CPU usage
-    { battery_perc, "\033[33;4m󰁿 %s%%\033[0m | ", "BAT0" },     // Yellow + underlined
-    { battery_remaining, "\033[33;4m%s\033[0m | ", "BAT0" },     // Yellow + underlined
+    { temp,         "\033[36;4m %s󰔄\033[0m |", "/sys/class/thermal/thermal_zone9/temp"},
+    { cpu_perc,     "\033[32;4m󰍛 %s%%\033[0m |", NULL },         // Green CPU usage
+    { battery_perc, "\033[33;4m󰂀 %s%%\033[0m |", "BAT0" },     // Yellow + underlined
+    { battery_remaining, "\033[33;4m%s\033[0m |", "BAT0" },     // Yellow + underlined
     // { datetime,     "\033[35;4m  %s\033[0m", "%l:%M " },           // Purple + underlined time
-    { datetime,     "\033[35;4m  %s\033[0m | \033[36m󰣇  \033[0m", "%l:%M " },
+    { datetime,     "\033[35;4m󱑂%s\033[0m |\033[36m \033[0m", "%l:%M " },
 };
